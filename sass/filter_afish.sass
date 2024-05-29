@@ -1,0 +1,135 @@
+@import "base/utilities.sass"
+@import "base/base.sass"
+
+@import "abstracts/variable.sass"
+@import "abstracts/mixin.sass"
+
+@import "components/button.sass"
+@import "components/filter_museums_cards_photo.sass"
+
+@import "layout/header.sass"
+@import "layout/footer.sass"
+@import "layout/grid.sass"
+
+.main__text
+    display: grid
+    justify-content: center
+    margin-top: 10rem
+    &__items
+        display: flex
+        margin-bottom: 3rem
+        &__input
+            padding: 1.5rem
+            border-radius: .7rem
+            font-family: Gotham
+            font-weight: 500
+            font-size: 1.6rem
+            border: 0
+            width: 100%
+            background-color: #F5F5F5
+
+.title-first
+    display: flex
+    justify-content: center
+    font-size: 5rem
+    color: $color-black
+    font-weight: 500
+    letter-spacing: .2rem
+    margin-bottom: 3rem
+
+.afishi
+    // position: absolute
+    // z-index: 100
+    position: relative
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 3rem
+    width: 114rem
+    height: 38rem
+    margin-top: 4rem
+    background-color: $color-white
+    border-radius: 2rem
+    box-shadow: $box-shadow
+    @include respond(tab-land)
+        width: 100%
+    @media (max-width: 1100px)
+        width: 100%
+        height: 25rem
+    @include respond(tab-port)
+        gap: 1rem
+    &__items__paragraph
+        font-family: Gotham
+        font-weight: 400
+        font-size: 1.6rem
+        color: #000
+    &__items__under
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 13rem
+        @include respond(tab-land)
+            margin-top: 7rem
+        @media (max-width: 1100px)
+            margin-top: 4rem
+        &_2
+            margin-top: 5rem !important
+            @media (max-width: 1100px)
+                margin-top: 0rem !important
+        
+
+.afishi__img
+    width: 50%
+    @include respond(tab-land)
+        width: 50%
+    @media (max-width: 1100px)
+        width: 65%
+    @include respond(tab-port)
+        width: 73%
+    &__item
+        border-radius: 2rem 0 0 2rem
+        @include respond(tab-land)
+            width: 200%
+            height: 60vh
+        @media (max-width: 1100px)
+            width: 150%
+            height: 40vh
+        @include respond(tab-port)
+            width: 130%
+            height: 35vh
+        @include respond(phone)
+            height: 28.5vh
+
+.afishi__text
+    position: relative
+    margin-top: 3rem
+    padding-right: 5rem
+    padding-bottom: 3rem
+    @include respond(tab-land)
+        padding-right: 1rem
+    @media (max-width: 1100px)
+        height: 50vh
+    @include respond(tab-port)
+    &__event
+        cursor: pointer
+        background-color: rgba(#A136B3,.1)
+        color: #A136B3
+        padding: .5rem 2.5rem
+        border: 0
+        border-radius: 20rem
+        font-family: Gotham
+        font-weight: 500
+        font-size: 1.6rem
+        margin-bottom: 2rem
+    &__title
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        letter-spacing: .2rem
+        color: #183B56
+        margin-bottom: 3rem
+        @media (max-width: 1100px)
+            font-size: 2rem
+            margin-bottom: 1rem
+        @include respond(tab-port)
+            font-size: 2rem
+        

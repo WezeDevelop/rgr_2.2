@@ -1,0 +1,693 @@
+@import "base/utilities.sass"
+@import "base/base.sass"
+
+@import "abstracts/variable.sass"
+@import "abstracts/mixin.sass"
+
+@import "components/button.sass"
+@import "components/composition.sass"
+
+@import "layout/grid.sass"
+@import "layout/footer.sass"
+@import "layout/header.sass"
+    
+
+.container1
+    position: absolute
+    z-index: inherit
+
+.bg__img
+    background-image: url('../img/bg-img.jpg')
+    height: 100vh
+    width: 100%
+    background-repeat: no-repeat
+    position: absolute
+    clip-path: ellipse(100% 44% at 50% 26%);
+    @media (max-width: 1920px)
+        height: 80vh
+    // @media (max-width:1300px) 
+    //     height: 130vh
+    @include respond(tab-port)
+        // background-image: url('../img/bg-img-port.jpg')
+        // height: 80vh
+        // width: 100rem
+        width: 100%
+    @media (max-width: 820px)
+        height: 90vh
+    @media (max-width: 770px)
+        height: 80vh
+    @media (max-width:600px)
+        height: 80vh
+
+
+
+.main__text
+    display: grid
+    justify-content: center
+    margin-top: 14rem
+
+.title-first
+    align-items: center
+    font-size: 5rem
+    color: $color-white
+    font-weight: 500
+    letter-spacing: .2rem
+    margin-bottom: 4rem
+
+.featured
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 3rem
+    width: 100%
+    height: 75%
+    // width: 114rem
+    // height: 38rem
+    background-color: $color-white
+    border-radius: 2rem
+    box-shadow: $box-shadow   
+    @include respond(tab-land)
+        height: 75%
+    @include respond(tab-port)
+        width: 100%
+        height: 75%
+        // width: 93rem
+        // height: 29em
+    
+
+.featured__img
+    width: 50%
+    &__item
+        border-radius: 2rem 0 0 2rem
+        // @media (max-width: 1920px)
+        //     width: 200%
+        @media (max-width: 1920px)
+            width: 200%
+        @media (max-width:1300px) 
+            width: 200%
+
+        @include respond(tab-land)
+            width: 200%
+        @include respond(tab-port)
+            width: 200%
+
+
+.featured__text
+    margin-top: 3rem
+    &__hadiach
+        cursor: pointer
+        background-color: rgba(54,179,126,.1)
+        color: $color-blue
+        padding: .5rem 2.5rem
+        border: 0
+        border-radius: 20rem
+        font-family: Gotham
+        font-weight: 500
+        font-size: 1.6rem
+        margin-bottom: 2rem
+        @media (max-width: 1920px)
+            padding: 1rem 3rem
+            font-size: 2rem
+        @media (max-width: 1440px)
+            font-size: 1.6rem
+            padding: .5rem 2.5rem
+        @media (max-width: 820px)
+            margin-bottom: 1rem
+    &__title
+        font-family: Gotham
+        font-weight: 700
+        font-size: $font-size
+        letter-spacing: .2rem
+        color: #183B56
+        margin-bottom: 3rem
+        @media (max-width: 1920px)
+            font-size: 5rem
+            margin-bottom: 5rem
+        @media (max-width: 1800px)
+            font-size: 4rem
+        @media (max-width: 1600px)
+            font-size: 3rem
+            margin-bottom: 3rem
+        @media (max-width:1300px)
+            font-size: 2.8rem
+        @include respond(tab-land)
+            font-size: 2rem
+        @media (max-width: 1100px)
+            font-size: 1.6rem
+            margin-bottom: 1rem
+        @media (max-width: 1000px)
+            margin-bottom: 0.5rem
+        @include respond(tab-port)
+            font-size: 2rem
+        @media (max-width: 820px)
+            font-size: 1.8rem
+            margin-bottom: 1rem
+        @include respond(phone)
+            font-size: 1.8rem
+        @media (max-width:500px)
+            font-size: 1.5rem
+    &__paragraph
+        font-family: Gotham
+        font-weight: book
+        font-size: 1.6rem
+        margin-bottom: 3rem
+        @media (max-width: 1920px)
+            font-size: 2.6rem
+            margin-bottom: 5rem
+        @media (max-width: 1600px)
+            font-size: 2rem
+            margin-bottom: 3rem
+        @media (max-width: 1100px)
+            font-size: 1.3rem
+        @media (max-width: 1000px)
+            margin-bottom: 1rem
+        @include respond(tab-port)
+            margin-bottom: 2rem
+        @media (max-width: 820px)
+            margin-bottom: 1rem
+            font-size: 1rem
+        @include respond(phone)
+            font-size: 1.3rem
+
+
+
+.popular__title
+    display: flex
+    justify-content: space-between
+    &__text
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: #183B56
+        @media (max-width: 1920px)
+            font-size: 5rem
+
+.popular__items
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 3rem
+    @media (max-width: 1920px)
+        grid-template-columns: repeat(3, 1fr)
+        row-gap: 0rem
+    @media (max-width: 1024px)
+        grid-template-columns: repeat(2, 1fr)
+        row-gap: 3rem
+    &_card
+        padding: 0 3rem
+        position: relative
+        height: 95vh
+        @media (max-width: 1920px)
+            height: 75vh
+        @media (max-width: 1600px)
+            height: 75vh
+        @media (max-width: 1024px)
+            height: 60vh
+        @include respond(tab-port)
+            height: 50vh
+        @include respond(phone)
+            height: 40vh
+    &__btn
+        margin-top: 3rem
+        margin-bottom: 23rem
+    &__title
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: $color-white
+        margin-bottom: 3rem
+        @media (max-width: 1500px)
+            font-size: 3rem
+        @include respond(tab-land)
+            font-size: 2.8rem
+            margin-bottom: 5.5rem
+        @media (max-width: 1000px)
+            font-size: 2.5rem
+        @include respond(tab-port)
+            font-size: 2.5rem
+            margin-bottom: 3rem
+        @media (max-width: 800px)
+            font-size: 1.8rem
+            margin-bottom: 2rem
+        @media (max-width: 700px)
+            margin-bottom: 4rem
+    &__title2
+        margin-bottom: 12rem
+        @include respond(tab-port)
+            margin-bottom: 6rem
+        @include respond(phone)
+            margin-bottom: 9rem
+    &__under
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__paragraph
+        font-family: Gotham
+        font-weight: 400
+        font-size: 1.6rem
+        color: $color-white
+
+.museum__title
+    margin-bottom: 7rem
+
+.more__museums
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 3rem
+    @include respond(tab-land)
+        margin-top: 5rem
+    @include respond(tab-port)
+        margin-top: 5rem
+
+
+.popular__img-1
+    background-image: url("../img/event_main-1.jpg");
+    background-repeat: no-repeat
+    width: 100%
+    @include respond(tab-port)
+        background-image: url("../img/event_main-port-1.jpg");
+        width: 100%
+
+.popular__img-2
+    background-image: url("../img/event_main-2.jpg");
+    background-repeat: no-repeat
+
+.museum__img-1
+    background-image: url("../img/museum__main-2.jpg");
+    background-repeat: no-repeat
+
+.museum__img-2
+    background-image: url("../img/museum__main-1.jpg");
+    background-repeat: no-repeat
+    border-radius: 1rem
+    border-bottom-left-radius: 1rem
+
+.event__img-3
+    background-image: url("../img/event_main-3.jpg");
+    background-repeat: no-repeat
+
+.news__title
+    display: flex
+    justify-content: space-between
+    &__text
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: #183B56
+        @media (max-width: 1920px)
+            font-size: 5rem
+
+.news__items
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 3rem
+    @media (max-width: 1920px)
+        grid-template-columns: repeat(4, 1fr)
+    @media (max-width: 1440px)
+        grid-template-columns: repeat(3, 1fr)
+    @media (max-width: 1000px)
+        grid-template-columns: repeat(2, 1fr)
+    @media (max-width: 700px)
+        display: flex
+        flex-wrap: wrap
+    &_card
+        padding: 0 3rem
+        position: relative
+        height: 75vh
+        @media (max-width: 1920px)
+            // width: 100%
+            height: 65vh
+        @media (max-width: 1600px)
+            height: 70vh
+        @media (max-width: 1440px)
+            height: 65vh
+        @include respond(tab-land)
+        height: 85vh
+        @media (max-width: 1100px)
+            height: 70vh
+        @media (max-width: 1000px)
+            height: 50vh
+        @include respond(tab-port)
+            height: 45vh
+        @media (max-width: 700px)
+            height: 40vh
+            width: 47%
+        @include respond(phone)
+            height: 40vh
+    &__btn
+        margin-top: 3rem
+        margin-bottom: 23rem
+    &__title
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: $color-white
+        margin-bottom: 3rem
+        margin-top: 16rem
+        @media (max-width: 1600px)
+            font-size: 3rem
+        @include respond(tab-land)
+            font-size: 3.2rem
+        @media (max-width: 1100px)
+            font-size: 2.8rem
+            margin-bottom: 3.9rem
+        @media (max-width: 1100px)
+            font-size: 2.5rem
+            margin-bottom: 6rem
+        @include respond(tab-port)
+            font-size: 2.5rem
+        @include respond(phone)
+            margin-bottom: 7rem
+    &__title2
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: $color-white
+        margin-bottom: 3rem
+        margin-top: 20rem
+        @media (max-width: 1600px)
+            font-size: 3rem
+        @media (max-width: 1100px)
+            font-size: 3rem
+        @include respond(tab-port)
+            font-size: 2.5rem
+    &__title3
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: $color-white
+        margin-bottom: 3rem
+        margin-top: 24rem
+        @media (max-width: 1600px)
+            font-size: 3rem
+        @media (max-width: 1100px)
+            font-size: 3rem
+        @include respond(tab-port)
+            font-size: 2.5rem
+    &__under
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__paragraph
+        font-family: Gotham
+        font-weight: 400
+        font-size: 1.6rem
+        color: $color-white
+
+.news__img-1
+    background-image: url("../img/news-1.jpg");
+    background-repeat: no-repeat
+    
+
+.news__img-2
+    background-image: url("../img/news-2.jpg");
+    background-repeat: no-repeat
+
+.news__img-3
+    background-image: url("../img/news-3.jpg");
+    background-repeat: no-repeat
+
+
+.afishi__card
+    position: relative
+    overflow: hidden
+
+.afishi
+    // position: absolute
+    // z-index: 100
+    position: relative
+    overflow: hidden
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 3rem
+    width: 114rem
+    height: 38rem
+    margin-top: 4rem
+    background-color: $color-white
+    border-radius: 2rem
+    box-shadow: $box-shadow
+    @media (max-width: 1920px)
+        width: 100%
+        // height: 50vh
+        height: 100%
+    @include respond(tab-land)
+        display: flex
+    @include respond(tab-port)
+        display: flex
+    @media (max-width: 700px)
+        height: 30rem
+    &__items__paragraph
+        font-family: Gotham
+        font-weight: 400
+        font-size: 1.6rem
+        color: #000
+    &__items__under
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 23rem
+        @include respond(tab-land)
+            width: 150%
+            justify-content: space-between
+        @media (max-width: 1100px)
+            width: 250%
+        @media (max-width: 1000px)
+            width: 200%
+        @include respond(tab-port)
+            width: 60%
+            justify-content: space-between
+        @media (max-width: 700px)
+            width: 40%
+            margin-top: 15rem
+            
+
+.afishi img
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 1
+        
+
+.afishi .prev
+    left: 1rem
+    @media (max-width: 1920px)
+        width: 6rem
+
+.afishi .next
+    right: 1rem
+    @media (max-width: 1920px)
+        width: 6rem
+    @include respond(tab-land)
+        // right: 25rem
+    @media (max-width: 1100px)
+        // margin-right: 2rem
+    @media (max-width: 1000px)
+        // margin-right: 10rem
+    @include respond(tab-port)
+        // right: 18rem
+    @media (max-width: 820px)
+        // right: 15rem
+    @media (max-width: 800px)
+        // right: 27rem
+    @media (max-width: 700px)
+        // right: 39rem
+    @include respond(phone)
+        // right: 35rem
+    
+
+.afishi__img
+    width: 100%
+    padding-left: 2rem
+    @include respond(tab-land)
+        width: 45%
+    @media (max-width: 1100px)
+        width: 37%
+    @include respond(tab-port)
+        width: 40%
+    @media (max-width: 820px)
+        width: 40%
+    @media (max-width: 700px)
+        width: 30%
+    &__item
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        transition: opacity .5s ease
+        border-radius: 2rem 0 0 2rem
+        @media (max-width: 1920px)
+            width: 50%
+        @include respond(tab-land)
+            width: 45%
+            height: 70vh
+        @media (max-width: 1100px)
+            width: 37%
+        @include respond(tab-port)
+            width: 50%
+        @media (max-width: 820px)
+            width: 40%
+            height: 54vh
+        @media (max-width: 700px)
+            width: 33%
+            height: 45vh
+
+
+.afishi__img__item.active
+    opacity: 1
+
+.afishi__titles
+    width: 100%
+
+.afishi__text__title
+    position: absolute
+    top: 5rem
+    left: 0
+    opacity: 0
+    @media (max-width: 1100px)
+        font-size: 1rem
+
+.afishi__text__title.active
+    opacity: 1
+
+.afishi__text
+    position: relative
+    margin-top: 3rem
+    padding-right: 5rem
+    padding-bottom: 3rem
+    @include respond(tab-port)
+        padding-right: 1rem
+        width: 55%
+        padding-left: 12rem
+    @media (max-width: 820px)
+        width: 90%
+    @media (max-width: 700px)
+        width: 100%
+    &__event
+        cursor: pointer
+        background-color: rgba(#A136B3,.1)
+        color: #A136B3
+        padding: .5rem 2.5rem
+        border: 0
+        border-radius: 20rem
+        font-family: Gotham
+        font-weight: 500
+        font-size: 1.6rem
+        margin-bottom: 2rem
+    &__title
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        letter-spacing: .2rem
+        color: #183B56
+        margin-bottom: 3rem
+        @media (max-width: 1920px)
+            font-size: 5rem
+        @include respond(tab-land)
+            font-size: 3rem
+            // width: 100%
+        @media (max-width: 1000px)
+            font-size: 2.6rem
+        @include respond(tab-port)
+            font-size: 2.5rem
+            width: 40%
+            padding-left: 12rem
+        @media (max-width: 700px)
+            margin-bottom: 1rem
+
+.controlls
+    cursor: pointer
+    transition: all .4s ease
+    &:hover
+        scale: (1.1)
+
+
+.circle1
+    cursor: pointer
+    position: absolute
+    transform: translate(-50%, -50%)
+    // margin-right: auto
+    align-self: center
+    font-size: 3.6rem
+    width: 5rem
+    height: 5rem
+    border-radius: 100rem
+    border: 0
+    color: $color-white
+    background: $color-blue
+    // transform: rotate(180deg)
+
+.circle2
+    cursor: pointer
+    position: absolute
+    transform: translate(-50%, -50%)
+    margin-left: 54rem
+    margin-top: 13rem
+    font-size: 3.6rem
+    width: 5rem
+    height: 5rem
+    border-radius: 100rem
+    border: 0
+    color: $color-white
+    background: $color-blue
+    // transform: rotate(180deg)
+
+
+svg
+    position: absolute
+    transform: translate(-50%, -50%)
+    font-size: 3.6rem
+    width: 4rem
+    height: 4rem
+
+.get__message
+    padding-top: 17rem
+    background: #1A3245
+    background-repeat: no-repeat
+    height: 100vh
+    clip-path: ellipse(88% 58% at 50% 60%);
+    @include respond(phone)
+        height: 75vh
+    &__items
+        &__title
+            color: $color-white
+            font-family: Gotham
+            font-weight: 700
+            font-size: $font-size
+            margin-bottom: 5rem
+            @media (max-width: 650px)
+                font-size: 1.8rem
+        &__input
+            padding: 1.5rem
+            border-radius: .7rem
+            font-family: Gotham
+            font-weight: 500
+            font-size: 1.6rem
+            border: 0
+            width: 60%
+            margin-bottom: 2.5rem
+        &__paragraph
+            font-family: Gotham
+            font-weight: 400
+            font-size: 1.6rem
+            color: #5A7184
+            @media (max-width: 650px)
+                font-size: 1.2rem
+        &__photo
+            padding: 1rem
+            background: white
+            height: 37vh
+            @media (max-width:600px)
+                height: 30vh
+        &__ph
+            width: 100%
+        &__under__title
+            margin-top: 2rem
+            font-family: Gotham
+            font-weight: 700
+            font-size: 1.8rem
+            color: #183B56
+        &__under__paragraph
+            font-family: Gotham
+            font-weight: 400
+            font-size: 1.6rem
+            color: #5A7184
+            margin-top: 1.5rem

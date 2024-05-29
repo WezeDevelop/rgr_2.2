@@ -1,0 +1,76 @@
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    
+.header
+    display: flex
+    justify-content: space-between
+    padding-top: 2rem
+    padding-bottom: 1.5rem
+    &__box
+        display: flex
+        flex-direction: row
+        align-items: center
+        list-style-type: none
+        @media (max-width: 770px)
+            display: block
+        &__item
+            transition: all .4s ease
+            &:not(:last-child)
+                margin-right: 6rem
+            &:hover
+                transform: translateY(-.3rem)
+                border-bottom: .1rem solid $color-black
+                @media (max-width: 770px)
+                    border: 0
+                    transform: translateY(-.1rem)
+                &:last-child
+                    border-bottom: 0rem
+        &__item__link
+            color: $color-white
+            text-decoration: none
+            font-weight: 400
+            font-size: 1.6rem
+            transition: all .4s ease
+            // @media (max-width: 770px)
+            //     color: #000
+            &:hover
+                font-weight: 700
+
+header input
+    display: none
+
+header label
+    font-size: 3rem
+    color: $color-white
+    cursor: pointer
+    visibility: hidden
+    opacity: 0
+
+
+@media (max-width: 770px)
+    header label
+        visibility: visible
+        opacity: 1
+    .header__box
+        position: absolute
+        top: 15%
+        left: 0
+        width: 100%
+        padding-left: 2rem
+        // background: white
+        background: transparent;
+        backdrop-filter: blur(.5rem);
+        box-shadow: $box-shadow
+        transform-origin: top
+        transform: scale(0)
+        opacity: 0
+        transition: all .5 ease
+    .header__box a
+        display: block
+        margin: 2rem 0
+        font-size: 1.8rem
+    header input:checked ~ .header__box
+        transform: scale(1)
+        opacity: 1

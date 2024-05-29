@@ -1,0 +1,70 @@
+.footer
+    padding-top: 5rem
+    background: #1A3245
+    height: 50vh
+    @include respond(tab-port)
+        padding-top: 3rem
+    @include respond(phone)
+        height: 40vh
+    &__title
+        font-family: Gotham
+        font-weight: 400
+        font-size: 3.2rem
+        color: $color-white
+        margin-bottom: 1.5rem
+    &__lg
+        margin-top: 6em
+        width: 40%
+    &__item
+        display: flex
+        &__photo
+            @include respond(tab-port)
+            width: 40%
+            height: 8rem
+        &__content
+            margin-left: 3rem
+            &__title
+                font-family: Gotham
+                font-weight: 400
+                font-size: 2rem
+                color: $color-white
+                margin-bottom: 1.8rem
+                @include respond(tab-port)
+                font-size: 1.5rem
+            &__paragraph
+                font-family: Gotham
+                font-weight: 400
+                font-size: 1.6rem
+                color: #7A7A7A
+
+.clock__container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    row-gap: 2rem
+    // border: .2rem solid blue
+    padding: 6rem
+    // background-color: teal
+    color: white
+    border-radius: 1rem
+    box-shadow: 13px 10px 22px -1px rgba(0,0,0,0.5);
+    @include respond(tab-land)
+        padding: 3rem
+
+.datetime-info
+    font-size: 5rem
+    font-weight: 700
+    @include respond(tab-land)
+    font-size: 2.8rem
+
+
+
+
+.map
+    border-radius: 2rem
+    @include respond(tab-land)
+        width: 80%
+        height: 80%
+    // margin-bottom: 2rem
+

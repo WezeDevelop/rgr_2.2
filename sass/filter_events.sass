@@ -1,0 +1,89 @@
+@import "base/utilities.sass"
+@import "base/base.sass"
+
+@import "abstracts/variable.sass"
+@import "abstracts/mixin.sass"
+
+@import "components/button.sass"
+@import "components/filter_events_cards_photo.sass"
+
+
+@import "layout/header.sass"
+@import "layout/footer.sass"
+@import "layout/grid.sass"
+
+.title-first
+    display: flex
+    justify-content: center
+    font-size: 5rem
+    color: $color-black
+    font-weight: 500
+    letter-spacing: .2rem
+    margin-bottom: 3rem
+
+.main__text
+    display: grid
+    justify-content: center
+    margin-top: 10rem
+    &__items
+        display: flex
+        margin-bottom: 3rem
+        &__input
+            padding: 1.5rem
+            border-radius: .7rem
+            font-family: Gotham
+            font-weight: 500
+            font-size: 1.6rem
+            border: 0
+            width: 100%
+            background-color: #F5F5F5
+
+.popular__items
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2rem
+    &_card
+        padding: 0 3rem
+        position: relative
+        height: 85vh
+        border-radius: 1rem
+        @media (max-width: 1100px)
+            height: 100vh
+        @include respond(tab-port)
+            height: 90vh
+        @include respond(tab-port)
+            height: 80vh
+    &__btn
+        margin-top: 3rem
+        margin-bottom: 23rem
+        &_1
+            margin-bottom: 19rem
+        &_2
+            margin-bottom: 14.5rem
+    &__title
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: $color-white
+        margin-bottom: 5rem
+        &_2
+            margin-bottom: 9rem
+        &_3
+            margin-bottom: 13rem
+            @include respond(tab-port)
+                margin-bottom: 17rem
+        &_4
+            margin-bottom: 17rem
+    &__title2
+        margin-bottom: 11rem
+    &__under
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__paragraph
+        font-family: Gotham
+        font-weight: 400
+        font-size: 1.6rem
+        color: $color-white
+
+

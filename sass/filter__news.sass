@@ -1,0 +1,116 @@
+@import "base/utilities.sass"
+@import "base/base.sass"
+
+@import "abstracts/variable.sass"
+@import "abstracts/mixin.sass"
+
+@import "components/button.sass"
+@import "components/filter_news_cards_photo.sass"
+
+@import "layout/header.sass"
+@import "layout/footer.sass"
+@import "layout/grid.sass"
+
+.main__text
+    display: grid
+    justify-content: center
+    margin-top: 10rem
+    &__items
+        display: flex
+        margin-bottom: 3rem
+        &__input
+            padding: 1.5rem
+            border-radius: .7rem
+            font-family: Gotham
+            font-weight: 500
+            font-size: 1.6rem
+            border: 0
+            width: 100%
+            background-color: #F5F5F5
+
+.title-first
+    display: flex
+    justify-content: center
+    font-size: 5rem
+    color: $color-black
+    font-weight: 500
+    letter-spacing: .2rem
+    margin-bottom: 3rem
+
+.news__title
+    display: flex
+    justify-content: space-between
+    &__text
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: #183B56
+
+.news__items
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+    &_card
+        padding: 1rem 1.5rem
+        position: relative
+        height: 75vh
+        @media (max-width: 1100px)
+            height: 70vh
+        @include respond(tab-port)
+            height: 65vh
+        @media (max-width: 700px)
+            height: 70vh
+        @include respond(phone)
+            height: 55vh
+    &__btn
+        margin-top: 3rem
+        margin-bottom: 23rem
+    &__title
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: $color-white
+        margin-bottom: 3rem
+        margin-top: 16rem
+        @media (max-width: 1100px)
+            font-size: 2.5rem
+        &_1
+            @media (max-width: 1100px)
+                margin-bottom: 10rem
+    &__title2
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: $color-white
+        margin-bottom: 3rem
+        margin-top: 20rem
+        @media (max-width: 1100px)
+            font-size: 2.5rem
+            margin-bottom: 6rem
+    &__title3
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: $color-white
+        margin-bottom: 3rem
+        margin-top: 24rem
+        @media (max-width: 1100px)
+            font-size: 2.5rem
+        &_2
+            margin-bottom: 8rem
+            @media (max-width: 1100px)
+                margin-bottom: 5rem
+        &_3
+            margin-bottom: 12rem
+            @media (max-width: 1100px)
+                margin-bottom: 8rem
+    &__under
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__paragraph
+        font-family: Gotham
+        font-weight: 400
+        font-size: 1.6rem
+        color: $color-white
+

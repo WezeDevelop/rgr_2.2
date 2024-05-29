@@ -1,0 +1,96 @@
+@import "base/utilities.sass"
+@import "base/base.sass"
+
+@import "abstracts/variable.sass"
+@import "abstracts/mixin.sass"
+
+@import "components/button.sass"
+@import "components/filter_museums_cards_photo.sass"
+
+@import "layout/header.sass"
+@import "layout/footer.sass"
+@import "layout/grid.sass"
+
+
+
+
+.main__text
+    display: grid
+    justify-content: center
+    margin-top: 10rem
+    &__items
+        display: flex
+        margin-bottom: 3rem
+        &__input
+            padding: 1.5rem
+            border-radius: .7rem
+            font-family: Gotham
+            font-weight: 500
+            font-size: 1.6rem
+            border: 0
+            width: 100%
+            background-color: #F5F5F5
+
+.title-first
+    align-items: center
+    font-size: 5rem
+    color: $color-black
+    font-weight: 500
+    letter-spacing: .2rem
+    margin-bottom: 3rem
+
+.all__cities
+    display: flex
+    flex-wrap: wrap
+
+
+.popular__items
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2rem
+    @media (max-width: 1100px)
+        gap: 1rem
+    &_card
+        padding: 0 3rem
+        position: relative
+        height: 80vh
+        border-radius: 1rem
+        @include respond(tab-port)
+            height: 70vh
+        @media (max-width: 820px)
+            height: 75vh
+        @include respond(phone)
+            height: 64vh
+    &__btn
+        margin-top: 3rem
+        margin-bottom: 23rem
+        &_1
+            margin-bottom: 19rem
+        &_2
+            margin-bottom: 14.5rem
+    &__title
+        font-family: Gotham
+        font-weight: 700
+        font-size: 3.6rem
+        color: $color-white
+        margin-bottom: 5rem
+        @media (max-width: 1100px)
+            font-size: 2.5rem
+        @include respond(tab-port)
+            margin-bottom: 8rem
+        &_2
+            margin-bottom: 9rem
+            @include respond(phone)
+                margin-bottom: 6rem
+    &__title2
+        margin-bottom: 11rem
+    &__under
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__paragraph
+        font-family: Gotham
+        font-weight: 400
+        font-size: 1.6rem
+        color: $color-white
+
